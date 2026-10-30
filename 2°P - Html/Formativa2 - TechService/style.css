@@ -1,0 +1,108 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: rgb(204, 204, 204);
+}
+
+/* CABEÇALHO */
+.cabecalho{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px;
+    background-color: rgb(32, 32, 255);
+}
+.menu{
+    display: flex;
+    gap: 25px;
+}
+li {
+    list-style: none;
+}
+li a{
+    text-decoration: none;
+    color: black;
+    transition: 0.5s;
+}
+li a:hover{
+    color: white;
+}
+
+/* PRIMEIRA SECTION */
+h2{
+    text-decoration: underline;
+}
+
+
+.servicos{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    text-align: center;
+    padding: 25px;
+}
+section h2{
+    text-align: center;
+    padding-top: 25px;
+}
+
+.card{
+    flex: 1;
+    padding: 10px;
+    background-color: white;
+    border-radius: 25px;
+    flex-basis: 40%;
+    box-shadow: 10px 10px rgb(101, 101, 101);
+}
+
+/* SEGUNDA SECTION */
+
+.motivos{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-evenly;
+    padding: 25px;
+}
+.motv{
+flex: 1;
+    text-align: center;
+    background-color: white;
+    border-radius: 25px;
+    flex-basis: 30%;
+    padding: 25px;
+    box-shadow: 10px 10px rgb(101, 101, 101);
+}
+
+/* RODAPÉ */
+.rodape{
+    text-align: center;
+    background-color: rgb(32, 32, 255);
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 768px){
+.cabecalho{
+    flex-direction: column;
+}
+    
+    .card {
+    flex-basis: 100%;
+    padding: 20px;
+}
+.motivos{
+    flex-direction: column;
+}
+
+.rodape{
+    flex-direction: column;
+    align-items: center;
+}
+}
