@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ConectaLab — Formativa 1 — AVD 2</title>
+<style>
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, sans-serif; background: #eef2f6; color: #243247; line-height: 1.6; }
+.layout { max-width: 1200px; margin: 0 auto; padding: 16px; display: grid; gap: 20px; grid-template-columns: 250px 1fr; grid-template-areas: "cabecalho" "hero" "lateral" "chamada" "rodape";}
+.cabecalho, .rodape { padding: 24px; background: #16324f; color: white; border-radius: 12px; }
+h1, h2, h3 { line-height: 1.25; }
+a { color: #126578; }
+.menu { padding: 0; list-style: none; }
+.menu li { display: inline-block; margin: 4px; }
+.menu a { display: inline-block; padding: 8px 12px; color: white; text-decoration: none; border-radius: 6px; }
+.menu a:hover { background: #28506f; }
+a:focus-visible { outline: 3px solid #e8a838; outline-offset: 3px; }
+.hero, .lateral, .principal, .chamada { background: white; padding: 20px; border-radius: 12px; margin-block: 16px; }
+.card { background: #f4f8fa; border: 1px solid #cad9e3; border-radius: 10px; padding: 16px; margin-block: 12px; }
+.etiqueta { color: #126578; font-weight: bold; }
+.aviso { padding: 12px; background: #fff4d8; border-left: 4px solid #d18b16; }
+.rodape a { color: white; }
+/* ATIVIDADE: adicione aqui a grade principal, as áreas nomeadas,
+   a grade dos quatro cards e a media query para até 768px. */
+
+/* ---------------RESPONSIVIDADE---------------------- */
+@media (max-width: 768px){
+  .layout{
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "cabecalho"
+    "hero"
+    "lateral"
+    "chamada"
+    "rodape";
+  }
+  .lista-oficinas {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+<body cz-shortcut-listen="true">
+<div class="layout">
+  <header class="cabecalho" id="inicio">
+    <p>Conhecimento para todos</p>
+    <h1>ConectaLab — Portal de Oficinas</h1>
+    <nav aria-label="Menu principal">
+      <ul class="menu">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#oficinas">Oficinas</a></li>
+        <li><a href="#inscricoes">Inscrições</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="hero" aria-labelledby="titulo-hero">
+    <h2 id="titulo-hero">Aprenda tecnologia na prática</h2>
+    <p>Encontre oficinas para desenvolver novas habilidades e compartilhar conhecimento.</p>
+    <p class="aviso">As oficinas desta página são fictícias e fazem parte de uma atividade acadêmica.</p>
+  </section>
+  <aside class="lateral" aria-labelledby="titulo-lateral">
+    <h2 id="titulo-lateral">Informações</h2>
+    <h3>Modalidades</h3>
+    <ul><li>Presencial</li><li>Online</li><li>Oficinas práticas</li></ul>
+    <h3>Antes de participar</h3>
+    <p>Confira o nível indicado e escolha um tema de seu interesse.</p>
+  </aside>
+  <main class="principal" id="oficinas">
+    <h2>Oficinas disponíveis</h2>
+    <p>Conheça os temas e escolha por onde começar.</p>
+    <div class="lista-oficinas">
+      <article class="card">
+        <p class="etiqueta">Iniciante</p>
+        <h3>HTML e CSS</h3>
+        <p>Crie sua primeira página com estrutura semântica e estilos.</p>
+      </article>
+      <article class="card">
+        <p class="etiqueta">Iniciante</p>
+        <h3>Redes de computadores</h3>
+        <p>Conheça os equipamentos e as conexões de uma rede local.</p>
+      </article>
+      <article class="card">
+        <p class="etiqueta">Iniciante</p>
+        <h3>Programação com Python</h3>
+        <p>Resolva pequenos problemas utilizando lógica de programação.</p>
+      </article>
+      <article class="card">
+        <p class="etiqueta">Intermediário</p>
+        <h3>Computação em nuvem</h3>
+        <p>Entenda como aplicações e arquivos são disponibilizados na nuvem.</p>
+      </article>
+    </div>
+  </main>
+  <section class="chamada" id="inscricoes" aria-labelledby="titulo-chamada">
+    <h2 id="titulo-chamada">Prepare sua próxima experiência</h2>
+    <p>Escolha uma oficina e converse com a equipe responsável pelas inscrições.</p>
+    <p>Contato fictício: oficinas@example.com</p>
+  </section>
+  <footer class="rodape">
+    <p>ConectaLab — Atividade acadêmica de HTML e CSS.</p>
+    <p>Aluno(a): Miguel Do Nascimento Oliveira Cavalcante | Turma: 2°Período</p>
+    <a href="#inicio">Voltar ao início</a>
+  </footer>
+</div>
+
+
+</body></html>
