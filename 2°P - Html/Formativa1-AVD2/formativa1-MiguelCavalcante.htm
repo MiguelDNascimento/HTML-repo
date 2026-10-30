@@ -6,39 +6,88 @@
 <title>ConectaLab — Formativa 1 — AVD 2</title>
 <style>
 * { box-sizing: border-box; }
-body { margin: 0; font-family: Arial, sans-serif; background: #eef2f6; color: #243247; line-height: 1.6; }
-.layout { max-width: 1200px; margin: 0 auto; padding: 16px; display: grid; gap: 20px; grid-template-columns: 250px 1fr; grid-template-areas: "cabecalho" "hero" "lateral" "chamada" "rodape";}
-.cabecalho, .rodape { padding: 24px; background: #16324f; color: white; border-radius: 12px; }
-h1, h2, h3 { line-height: 1.25; }
-a { color: #126578; }
-.menu { padding: 0; list-style: none; }
-.menu li { display: inline-block; margin: 4px; }
-.menu a { display: inline-block; padding: 8px 12px; color: white; text-decoration: none; border-radius: 6px; }
-.menu a:hover { background: #28506f; }
-a:focus-visible { outline: 3px solid #e8a838; outline-offset: 3px; }
-.hero, .lateral, .principal, .chamada { background: white; padding: 20px; border-radius: 12px; margin-block: 16px; }
-.card { background: #f4f8fa; border: 1px solid #cad9e3; border-radius: 10px; padding: 16px; margin-block: 12px; }
-.etiqueta { color: #126578; font-weight: bold; }
-.aviso { padding: 12px; background: #fff4d8; border-left: 4px solid #d18b16; }
-.rodape a { color: white; }
-/* ATIVIDADE: adicione aqui a grade principal, as áreas nomeadas,
-   a grade dos quatro cards e a media query para até 768px. */
+html, body { overflow-x: hidden; width: 100%; }
+body { margin: 0; font-family: Arial, sans-serif; background: #bcd9cf; color: #243247; line-height: 1.6; }
+.layout { 
+  max-width: 1200px; 
+  margin: 0 auto; 
+  padding: 16px; 
+  display: grid; 
+  gap: 20px; 
+  grid-template-columns: 250px 1fr; 
+  grid-template-areas: 
+    "cabecalho cabecalho"
+    "hero hero"
+    "lateral principal"
+    "chamada chamada"
+    "rodape rodape"; 
+}
 
-/* ---------------RESPONSIVIDADE---------------------- */
-@media (max-width: 768px){
-  .layout{
-    grid-template-columns: 1fr;
-    grid-template-areas:
-    "cabecalho"
-    "hero"
-    "lateral"
-    "chamada"
-    "rodape";
+.cabecalho { 
+  grid-area: cabecalho; 
+  padding: 24px; 
+  background: #1b6c4c; 
+  color: white; 
+  border-radius: 12px; 
+}
+
+.hero { grid-area: hero; margin-block: 0; background: white; padding: 20px; border-radius: 12px; }
+.lateral { grid-area: lateral; margin-block: 0; background: white; padding: 20px; border-radius: 12px; }
+.principal { grid-area: principal; margin-block: 0; background: white; padding: 20px; border-radius: 12px; }
+.chamada { grid-area: chamada; margin-block: 0; background: white; padding: 20px; border-radius: 12px; }
+
+.rodape { 
+  grid-area: rodape; 
+  padding: 24px; 
+  background: #1b6c4c;
+  color: white; 
+  border-radius: 12px; 
+}
+
+h1, h2, h3 { line-height: 1.25; margin-top: 0; }
+a { color: #126578; }
+.menu { padding: 0; list-style: none; margin: 12px 0 0 0; }
+.menu li { display: inline-block; margin-right: 16px; }
+.menu a { display: inline-block; color: white; text-decoration: none; font-weight: 500; }
+.menu a:hover { text-decoration: underline; }
+a:focus-visible { outline: 3px solid #e8a838; outline-offset: 3px; }
+
+.lista-oficinas { 
+  display: grid; 
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 16px; 
+}
+
+.card { 
+  background: #f8fafc; 
+  border: 1px solid #cbd5e1; 
+  border-radius: 10px; 
+  padding: 16px; 
+  margin-block: 0;
+}
+
+.etiqueta { color: #126578; font-weight: bold; }
+.aviso { padding: 12px; background: #fef3c7; border-left: 4px solid #d97706; border-radius: 4px; }
+.rodape a { color: white; }
+
+/* ------------------RESPONSIVIDADE------------- */
+@media (max-width: 768px) {
+  .layout { 
+    grid-template-columns: 1fr; 
+    grid-template-areas: 
+      "cabecalho"
+      "hero"
+      "lateral"
+      "principal"
+      "chamada"
+      "rodape"; 
   }
-  .lista-oficinas {
+  .lista-oficinas { 
     grid-template-columns: 1fr;
   }
 }
+/* ATIVIDADE: adicione aqui a grade principal, as áreas nomeadas,
+   a grade dos quatro cards e a media query para até 768px. */
 </style>
 </head>
 <body cz-shortcut-listen="true">
@@ -72,8 +121,8 @@ a:focus-visible { outline: 3px solid #e8a838; outline-offset: 3px; }
     <div class="lista-oficinas">
       <article class="card">
         <p class="etiqueta">Iniciante</p>
-        <h3>HTML e CSS</h3>
-        <p>Crie sua primeira página com estrutura semântica e estilos.</p>
+        <h3>Criação de sites responsivos</h3>
+        <p>Aprenda a organizar páginas com CSS Grid e adaptar o conteúdo para computadores e celulares.</p>
       </article>
       <article class="card">
         <p class="etiqueta">Iniciante</p>
