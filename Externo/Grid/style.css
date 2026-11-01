@@ -1,0 +1,43 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-wrap: break-word
+}
+.grid-container {
+    display: grid;
+    gap: 15px;
+    min-height: 100vh;
+    grid-template-columns: 180px 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+        "header header"
+        "sidebar main"
+        "footer footer";
+}
+.header{
+    background-color: bisque;
+    grid-area: header;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+.sidebar{
+    background-color: bisque;
+    grid-area: sidebar;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+.main{
+    background-color: bisque;
+    grid-area: main;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+.footer{
+    background-color: bisque;
+    grid-area: footer;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
