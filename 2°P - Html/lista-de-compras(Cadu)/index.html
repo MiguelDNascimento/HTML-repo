@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <!-- Faz a página se ajustar à tela do celular -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Compras</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <button id="btnVoltar" class="btn-voltar">← Voltar</button>
+
+    <h1>🛒 Lista de Compras</h1>
+
+    <div class="area-adicionar">
+      <input type="text" id="inputItem" placeholder="Digite um item...">
+      <button id="btnAdicionar" class="btn-adicionar">Adicionar item</button>
+    </div>
+
+    <p id="msgErro" class="msg-erro"></p>
+
+    <!-- Os itens são criados pelo JavaScript aqui dentro -->
+    <ul id="lista"></ul>
+
+  </div>
+
+  <!-- Alerta que aparece embaixo quando um item é removido -->
+  <div id="alerta" class="alerta">
+    <span>⚠️ O item foi removido da lista</span>
+    <button id="btnFecharAlerta" class="btn-fechar">X</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
