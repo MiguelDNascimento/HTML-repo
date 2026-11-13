@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formativa APW II - Portal Tech</title>
+    <style>
+        /* ESTILIZAÇÃO PRONTA: não altere este bloco. */
+        * { box-sizing: border-box; }
+        body { margin: 0; padding: 24px; font-family: Arial, sans-serif; background: #eef2f6; color: #243247; }
+        .portal { max-width: 1100px; margin: 0 auto; }
+        .cabecalho, .menu, .conteudo, .rodape { padding: 24px; border-radius: 12px; }
+        .cabecalho { background: #123b55; color: white; }
+        .cabecalho p { color: #d6e8f2; }
+        .menu, .conteudo { background: white; border: 1px solid #dce4eb; }
+        h1, h2, h3 { margin: 0 0 12px; }
+        p { margin: 0 0 12px; line-height: 1.6; }
+        ul { list-style: none; padding: 0; margin: 0; }
+        li { margin-bottom: 14px; }
+        a { color: #145e75; text-decoration: none; }
+        .card { background: #e8f2f6; border: 1px solid #cadfe8; padding: 18px; border-radius: 10px; }
+        .card p { margin-bottom: 0; }
+        .rodape { background: #123b55; color: white; text-align: center; }
+        .rodape p { margin: 0; }
+
+        /* ==================================================
+           ÁREA DO ALUNO: complete somente os blocos abaixo.
+           Use CSS Grid e gap. Não altere o HTML.
+           ================================================== */
+
+        .portal {
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            gap: 20px;
+            grid-template-areas:    
+            "cabecalho cabecalho"
+            "menu conteudo"
+            "rodape rodape";
+            /* TODO 1: ativar Grid e definir as duas colunas. */
+            /* TODO 2: definir o espaçamento e as áreas do layout. */
+        }
+
+        .cabecalho {
+            grid-area: cabecalho;
+            /* TODO 3: associar o cabeçalho à sua área. */
+        }
+
+        .menu {
+            grid-area: menu;
+            /* TODO 3: associar o menu à sua área. */
+        }
+
+        .conteudo {
+            grid-area: conteudo;
+            /* TODO 3: associar o conteúdo à sua área. */
+        }
+
+        .rodape {
+            grid-area: rodape;
+            /* TODO 3: associar o rodapé à sua área. */
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 250px);
+            gap: 16px;
+            /* TODO 4: criar um Grid de três colunas iguais. */
+            /* TODO 5: definir o espaçamento entre os cards. */
+        }
+    </style>
+</head>
+<body cz-shortcut-listen="true">
+    <div class="portal">
+        <header class="cabecalho">
+            <h1>Portal Tech</h1>
+            <p>Tecnologia, educação e inovação em um só lugar.</p>
+        </header>
+
+        <nav class="menu" aria-label="Menu de assuntos">
+            <h2>Assuntos</h2>
+            <ul>
+                <li><a href="#tecnologia">Tecnologia</a></li>
+                <li><a href="#educacao">Educação</a></li>
+                <li><a href="#inovacao">Inovação</a></li>
+            </ul>
+        </nav>
+
+        <main class="conteudo">
+            <h2>Em destaque</h2>
+            <p>Conheça os assuntos desta edição.</p>
+            <div class="cards">
+                <article class="card" id="tecnologia">
+                    <h3>Tecnologia</h3>
+                    <p>Ferramentas digitais que fazem parte do nosso dia a dia.</p>
+                </article>
+                <article class="card" id="educacao">
+                    <h3>Educação</h3>
+                    <p>Novas possibilidades para aprender e compartilhar conhecimento.</p>
+                </article>
+                <article class="card" id="inovacao">
+                    <h3>Inovação</h3>
+                    <p>Ideias criativas para solucionar problemas da comunidade.</p>
+                </article>
+            </div>
+        </main>
+
+        <footer class="rodape">
+            <p>Portal Tech | Atividade prática de APW II</p>
+        </footer>
+    </div>
+
+
+</body></html>
