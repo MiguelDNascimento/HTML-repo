@@ -21,7 +21,7 @@ function criarItem(nome) {
   texto.textContent = nome;
 
   const btnRemover = document.createElement("button");
-  btnRemover.textContent = "🗑️";
+  btnRemover.textContent = "✕";
   btnRemover.className = "btn-remover";
 
   // Marcar e desmarcar como concluído
