@@ -156,13 +156,25 @@ nav {
 }
 
 .nav-inner {
-  max-width: 1200px;
+  width: 100%;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 16px 25px;
+  padding: 16px 40px;
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 20px;
+}
+.logo-site{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo-site img{
+  width: 60px;
+  height: 50px;
+  object-fit: contain;
 }
 
 .logo {
